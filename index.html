@@ -2,51 +2,84 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Apoya esta causa con tu donación.">
-<title>Donaciones | LaCardio</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0f2c6e">
+<meta name="description" content="Realiza tu donación a la Fundación Cardio Infantil.">
+<title>Donaciones | Fundación Cardio Infantil</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-30QGR4ZMD5"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-30QGR4ZMD5');</script>
 </head>
 <body>
-<header class="header"><img src="assets/logo.png" alt="Logo LaCardio" class="logo"></header>
-<main class="container">
-<section class="campaign-card"><img src="assets/campana.jpg" alt="Campaña de donación" class="campaign-image"></section>
-<section class="donation-card">
-<h1>Quiero ayudar con mi aportación</h1>
-<p class="subtitle">Elige cuánto quieres donar</p>
-<div class="amount-grid">
-<a class="donation-button" href="https://new-checkout.epayco.co/checkout/6a9f49178086ec20539e15da" target="_blank" rel="noopener noreferrer">$200.000</a>
-<a class="donation-button" href="https://new-checkout.epayco.co/checkout/6a9f493296af39c0209d0d66" target="_blank" rel="noopener noreferrer">$500.000</a>
-<a class="donation-button" href="https://new-checkout.epayco.co/checkout/6a9f494696af39c0209d0edd" target="_blank" rel="noopener noreferrer">$1.000.000</a>
-<a class="donation-button" href="https://new-checkout.epayco.co/checkout/6a9f496496af39c0209d10ff" target="_blank" rel="noopener noreferrer">$2.000.000</a>
-<a class="donation-button" href="https://new-checkout.epayco.co/checkout/6a9f497d96af39c0209d12f2" target="_blank" rel="noopener noreferrer">$4.000.000</a>
-</div>
-<button type="button" class="other-button" id="openForm">Otro valor</button>
+<div class="ambient" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+<header class="site-header">
+  <div class="header-in">
+    <a href="#inicio" class="brand"><img src="assets/logo.png" alt="Fundación Cardio Infantil"></a>
+    <div class="header-right"><span class="header-note">Fundación Cardio Infantil</span><a class="header-cta" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener">Donar ahora <b>→</b></a></div>
+  </div>
+</header>
 
-<div class="form-wrap" id="formWrap" hidden>
-<div class="divider"></div>
-<h2>Solicitar enlace de pago</h2>
-<p class="form-intro">Déjanos tus datos y te enviaremos el enlace para realizar tu donación.</p>
-<form id="donationForm" action="https://formsubmit.co/ajax/Ecaudofunda@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="Nueva solicitud de donación">
-<input type="hidden" name="_captcha" value="false">
-<input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
-<label for="name">Nombre completo</label>
-<input id="name" name="Nombre" type="text" autocomplete="name" required>
-<label for="phone">Número de celular</label>
-<input id="phone" name="Celular" type="tel" inputmode="tel" autocomplete="tel" required>
-<label for="email">Correo electrónico</label>
-<input id="email" name="Correo" type="email" autocomplete="email" required>
-<label for="amount">Valor que desea donar</label>
-<input id="amount" name="Valor solicitado" type="number" min="1" step="1000" placeholder="Ej. 750000" required>
-<label class="consent"><input id="consent" type="checkbox" required><span>Al enviar tus datos autorizas el uso de esta información para gestionar tu solicitud de donación y recibir el enlace de pago.</span></label>
-<button type="submit" class="submit-button" id="submitButton">Solicitar enlace de pago</button>
-<p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
-</form>
-</div>
+<main id="inicio">
+<section class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="kicker"><i></i> DONAR ES UNA FORMA DE CUIDAR</div>
+      <h1>Tu aporte puede<br><span>cambiar una vida.</span></h1>
+      <p class="hero-lead">Cada donación suma a la misión de brindar atención y oportunidades a niños, niñas y familias que lo necesitan.</p>
+      <div class="hero-actions"><a href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener" class="primary-cta">Quiero donar <b>→</b></a><span class="payment-note"><strong>Pago gestionado por ePayco</strong><small>Serás dirigido al entorno de pago para completar tu aporte.</small></span></div>
+      <div class="hero-line"><span></span><p>Un gesto sencillo. Un impacto que permanece.</p></div>
+    </div>
+    <div class="hero-media">
+      <div class="media-outline"></div>
+      <img src="assets/campana.jpg" alt="Campaña de donación de la Fundación Cardio Infantil">
+      <div class="media-caption"><small>Tu donación</small><strong>hace la diferencia.</strong></div>
+    </div>
+  </div>
+  <div class="hero-bottom"></div>
 </section>
+
+<section id="donar" class="donation-section">
+  <div class="section-heading"><div><span class="section-kicker">ELIGE TU APORTE</span><h2>¿Cuánto quieres donar?</h2></div><p>Selecciona un valor para continuar.</p></div>
+  <div class="donation-box">
+    <div class="moving-rule" aria-hidden="true"><div>DONAR <span>•</span> SUMAR <span>•</span> TRANSFORMAR <span>•</span> DONAR <span>•</span> SUMAR <span>•</span> TRANSFORMAR <span>•</span></div></div>
+    <div class="amounts">
+      <a class="amount" data-donation-value="$200.000" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span class="amount-index">01</span><strong>$200.000</strong><small>DONAR <b>→</b></small></a>
+      <a class="amount" data-donation-value="$500.000" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span class="amount-index">02</span><strong>$500.000</strong><small>DONAR <b>→</b></small></a>
+      <a class="amount featured" data-donation-value="$1.000.000" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span class="recommended">OPCIÓN DESTACADA</span><span class="amount-index">03</span><strong>$1.000.000</strong><small>DONAR AHORA <b>→</b></small><i class="featured-line"></i></a>
+      <a class="amount" data-donation-value="$2.000.000" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span class="amount-index">04</span><strong>$2.000.000</strong><small>DONAR <b>→</b></small></a>
+      <a class="amount" data-donation-value="$4.000.000" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span class="amount-index">05</span><strong>$4.000.000</strong><small>DONAR <b>→</b></small></a>
+    </div>
+    <a class="other" id="openForm" href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener"><span>+</span><strong>Donar otro valor</strong><b>→</b></a>
+    <div class="payment-disclaimer"><span class="shield">✓</span><div><strong>El pago se completa en ePayco</strong><small>Esta página no solicita ni almacena datos de tarjetas.</small></div></div>
+
+    </div>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="trust-title"><span class="trust-number">01</span><div><span>UN PROCESO CLARO</span><h2>Tu aporte, paso a paso.</h2></div></div>
+    <div class="steps">
+      <article><span>01</span><div><b>Elige</b><p>Selecciona el valor que deseas aportar.</p></div></article>
+      <article><span>02</span><div><b>Continúa</b><p>Serás dirigido a ePayco para completar el pago.</p></div></article>
+      <article><span>03</span><div><b>Contribuye</b><p>Tu donación se suma a una misión que busca transformar vidas.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="privacy-section">
+  <div class="privacy-inner">
+    <div class="privacy-mark">PD</div>
+    <div class="privacy-copy"><span>PRIVACIDAD Y HABEAS DATA</span><h2>Tu información merece cuidado.</h2><p>Los datos que suministres mediante este sitio serán utilizados para gestionar tu solicitud de donación y tratados de acuerdo con las finalidades informadas y las disposiciones aplicables de protección de datos personales.</p><p>Para consultas relacionadas con protección de datos personales y Habeas Data:</p><a href="mailto:habeasdata@fundacioncardioinfantil.com.co">habeasdata@fundacioncardioinfantil.com.co</a><div class="privacy-links"><a href="#aviso">Aviso de privacidad</a><a href="mailto:habeasdata@fundacioncardioinfantil.com.co">Protección de datos / Habeas Data</a></div><p id="aviso" class="privacy-small">No ingreses datos de tarjetas en los formularios de esta página. El proceso de pago se realiza en el entorno de ePayco.</p></div>
+  </div>
+</section>
+
+<section class="closing"><div class="closing-inner"><div class="closing-rule"></div><span>GRACIAS POR CONTRIBUIR</span><h2>Un aporte puede ser<br><b>el comienzo de algo grande.</b></h2><a href="https://fundacion.cardioinfantil.org/donar.html" target="_blank" rel="noopener">Donar ahora <b>→</b></a></div></section>
 </main>
-<footer>Gracias por apoyar esta causa.</footer>
+<footer><div class="footer-main"><img src="assets/logo.png" alt="Fundación Cardio Infantil"><div><strong>Donaciones</strong><span>Proceso de pago gestionado por ePayco</span></div><div><strong>Protección de datos</strong><a href="mailto:habeasdata@fundacioncardioinfantil.com.co">habeasdata@fundacioncardioinfantil.com.co</a></div></div><div class="footer-bottom"><span>© 2026 Fundación Cardio Infantil. Todos los derechos reservados.</span><span>Protección de datos personales · Habeas Data · Aviso de privacidad</span></div></footer>
 <script src="script.js"></script>
 </body>
 </html>

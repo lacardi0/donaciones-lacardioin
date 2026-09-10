@@ -1,4 +1,15 @@
-const form=document.getElementById("donationForm"),formWrap=document.getElementById("formWrap"),openForm=document.getElementById("openForm"),submitButton=document.getElementById("submitButton"),message=document.getElementById("formMessage");
-openForm.addEventListener("click",()=>{formWrap.hidden=false;openForm.hidden=true;formWrap.scrollIntoView({behavior:"smooth",block:"start"});document.getElementById("name").focus()});
-form.addEventListener("submit",async e=>{e.preventDefault();message.textContent="";const name=document.getElementById("name").value.trim(),phone=document.getElementById("phone").value.trim(),email=document.getElementById("email").value.trim(),amount=Number(document.getElementById("amount").value),consent=document.getElementById("consent").checked,honey=form.querySelector('[name="_honey"]').value.trim();if(honey)return;const digits=phone.replace(/\D/g,"");if(name.length<2)return show("Escribe tu nombre completo.");if(digits.length<7||digits.length>15)return show("Escribe un número de celular válido.");if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email))return show("Escribe un correo electrónico válido.");if(!Number.isFinite(amount)||amount<=0)return show("Escribe un valor de donación válido.");if(!consent)return show("Debes aceptar el aviso de uso de datos.");submitButton.disabled=true;submitButton.textContent="Enviando...";try{const r=await fetch(form.action,{method:"POST",body:new FormData(form),headers:{Accept:"application/json"}});if(!r.ok)throw new Error();form.reset();message.textContent="Gracias por tu interés en apoyar esta causa. Hemos recibido tu solicitud y te enviaremos el enlace de pago.";message.style.color="#18794e"}catch(err){show("No pudimos enviar la solicitud. Por favor intenta nuevamente.")}finally{submitButton.disabled=false;submitButton.textContent="Solicitar enlace de pago"}});
-function show(t){message.textContent=t;message.style.color="#b42318"}
+(function(){
+  const DONATION_URL = 'https://fundacion.cardioinfantil.org/donar.html';
+  function gaEvent(name, params){
+    if(typeof window.gtag === 'function') window.gtag('event', name, params || {});
+  }
+  document.querySelectorAll('a[href="'+DONATION_URL+'"]').forEach(function(link){
+    link.addEventListener('click', function(){
+      gaEvent('donacion_click', {
+        metodo: 'Fundacion Cardio Infantil',
+        url_checkout: DONATION_URL,
+        valor_donacion: this.dataset.donationValue || 'No especificado'
+      });
+    });
+  });
+})();

@@ -1,15 +1,14 @@
-# Donaciones LaCardio
+# Donaciones | Fundación Cardio Infantil
 
-Sube todo respetando esta estructura:
+Landing page estática para GitHub Pages.
 
-donaciones-lacardio/
-- index.html
-- style.css
-- script.js
-- README.md
-- assets/logo.png
-- assets/campana.jpg
+## Donaciones
+Todos los botones y llamados a donar utilizan un único destino oficial:
+https://fundacion.cardioinfantil.org/donar.html
 
-GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root) → Save.
+Los valores mostrados son opciones visuales; el proceso de donación continúa en la página oficial.
 
-El formulario "Otro valor" usa FormSubmit para enviar las solicitudes a Ecaudofunda@gmail.com. En el primer envío, el servicio puede pedir confirmar el correo receptor.
+## Analytics
+Google Analytics 4: G-30QGR4ZMD5
+
+Se registra el clic de donación sin enviar nombre, celular, correo ni datos de tarjeta a Analytics.
